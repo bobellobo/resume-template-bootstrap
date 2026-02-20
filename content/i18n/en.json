@@ -1,6 +1,5 @@
 {
   "misc" : {
-    "jobTitle": "Full Stack Developer",
     "lightMode": "Light",
     "darkMode": "Dark"
   },
@@ -59,7 +58,12 @@
     "description": "Feel free to reach out for collaborations or just a friendly hello"
   },
   "footer": {
-    "copyright": "© 2026 Titouan Guedon. All rights reserved."
+    "copyright": "© 2026 Titouan Guedon. All rights reserved.",
+    "links": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
+    }
   },
   "modal": {
     "visitProject": "Visit project",
