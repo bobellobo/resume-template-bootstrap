@@ -7,8 +7,14 @@
         <article v-for="category in skillCategories" :key="category.titleKey" class="skill-card surface-card">
           <h3 class="skill-heading">{{ $t(category.titleKey) }}</h3>
           <ul class="skill-list">
-            <li v-for="itemKey in category.itemKeys" :key="itemKey" class="skill-item">
-              {{ $t(itemKey) }}
+            <li
+              v-for="itemKey in category.itemKeys"
+              :key="itemKey"
+              class="skill-item"
+            >
+              <span :class="['skill-item-label', { 'skill-item-label-joke': category.strikethroughItemKeys?.includes(itemKey) }]">
+                {{ $t(itemKey) }}
+              </span>
             </li>
           </ul>
         </article>
@@ -34,12 +40,25 @@ const skillCategories = [
     ]
   },
   {
+    titleKey: 'profile.skills.softSkills.title',
+    itemKeys: [
+      'profile.skills.softSkills.item1',
+      'profile.skills.softSkills.item2',
+      'profile.skills.softSkills.item3',
+      'profile.skills.softSkills.item4',
+      'profile.skills.softSkills.item5',
+      'profile.skills.softSkills.item6'
+    ],
+    strikethroughItemKeys: ['profile.skills.softSkills.item6']
+  },
+  {
     titleKey: 'profile.skills.cognitiveScience.title',
     itemKeys: [
       'profile.skills.cognitiveScience.item1',
       'profile.skills.cognitiveScience.item2',
       'profile.skills.cognitiveScience.item3',
-      'profile.skills.cognitiveScience.item4'
+      'profile.skills.cognitiveScience.item4',
+      'profile.skills.cognitiveScience.item5'
     ]
   },
   {
@@ -49,15 +68,6 @@ const skillCategories = [
       'profile.skills.languages.item2',
       'profile.skills.languages.item3',
       'profile.skills.languages.item4'
-    ]
-  },
-  {
-    titleKey: 'profile.skills.softSkills.title',
-    itemKeys: [
-      'profile.skills.softSkills.item1',
-      'profile.skills.softSkills.item2',
-      'profile.skills.softSkills.item3',
-      'profile.skills.softSkills.item4'
     ]
   }
 ]
