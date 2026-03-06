@@ -53,7 +53,8 @@
   },
   "projects": {
     "title": "Projects & Achievements",
-    "imageUnavailable": "Project preview unavailable"
+    "imageUnavailable": "Project preview unavailable",
+    "swipeHint": "Swipe to browse"
   },
   "experience": {
     "title": "Professional Experience",
@@ -107,6 +108,10 @@
     "contactLinks": "Contact links",
     "profile": "Profile",
     "attribution": "This PDF was exported from the portfolio website: {link}",
+    "previewOn": "Preview Print",
+    "previewOff": "Exit Preview",
+    "previewOnHint": "Enable print preview mode",
+    "previewOffHint": "Disable print preview mode",
     "switchToFrench": "Switch language to French",
     "switchToEnglish": "Switch language to English"
   }
