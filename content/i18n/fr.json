@@ -13,43 +13,8 @@
     "contact": "Contact"
   },
   "profile": {
-    "description": "Salut! \nJe suis Titouan, un développeur fullstack avec plus de 3 ans d'expérience, formé à l'{university}. J'ai de par ma formation une approche de conception centrée sur l'utilisateur et suis sensible à l'importance d'une bonne UX/UI. \n\nDans mes expériences passées, j'ai également acquis une solide expertise technique avec divers outils et méthodologies. \nJe suis capable de prendre en main des sujets techniques et de monter rapidement en compétence pour me concentrer sur le cœur de la conception, sans compromis sur la qualité technique et la propreté du code. \n\nAprès 2 ans passés à travailler à l'étranger, je suis à la recherche de nouvelles opportunités en France pour continuer à évoluer en tant que développeur.",
     "universityLabel": "Ecole Nationale Supérieure de Cognitique",
-    "skillsTitle": "Aperçu des compétences",
-    "skills": {
-      "development": {
-        "title": "Développement",
-        "item1": "Développement web full-stack",
-        "item2": "TypeScript, JavaScript et frameworks modernes",
-        "item3": "Conception et intégration d'API",
-        "item4": "Programmation fonctionnelle",
-        "item5": "Architecture propre et code maintenable"
-      },
-      "cognitiveScience": {
-        "title": "Sciences cognitives",
-        "item1": "Analyse des comportements utilisateurs",
-        "item2": "Principes d'interaction humain-machine",
-        "item3": "Conception et interprétation d'expériences",
-        "item4": "Conception centrée utilisateur",
-        "item5": "Maîtrise des outils de design UX/UI"
-      },
-      "languages": {
-        "title": "Langues parlées",
-        "item1": "Français (langue maternelle)",
-        "item2": "Anglais (bilingue professionnel)",
-        "item3": "Italien (bilingue professionnel)",
-        "item4": "Espagnol (intermédiaire)"
-      },
-      "softSkills": {
-        "title": "Soft skills",
-        "item1": "Communication claire",
-        "item2": "Esprit d'équipe et collaboration",
-        "item3": "Résolution de problèmes",
-        "item4": "Adaptabilité et apprentissage continu",
-        "item5": "Forte capacité d'autonomie",
-        "item6": "Plutôt fort au babyfoot"
-      }
-    }
+    "skillsTitle": "Aperçu des compétences"
   },
   "projects": {
     "title": "Projets et réalisations",
@@ -57,30 +22,7 @@
     "swipeHint": "Glisser pour naviguer"
   },
   "experience": {
-    "title": "Expériences professionnelles",
-    "items": {
-      "item1": {
-        "period": "Janvier 2024 — Janvier 2026",
-        "role": "Développeur Full-stack",
-        "company": "STMicroelectronics - System Research & Application",
-        "location": "Catane, Italie",
-        "description": "Conception et livraison d'applications web de bout en bout, de l'architecture au déploiement, avec une grande attention portée à la propreté des interfaces et la performance.Fort accent sur les paradigmes de programmation fonctionnelle et les bonnes pratiques de développement."
-      },
-      "item2": {
-        "period": "Septembre 2022 — Août 2023",
-        "role": "Développeur Full-stack",
-        "company": "Sopra Steria - Aeroline",
-        "location": "Bordeaux, France",
-        "description": "Tâches de développement dans un projet d'envergure du secteur de l'aéronautique, toujours dans un contexte agile. Dans la continuité du travail fourni en stage avec toujours un ownership important et des responsabilités accrues."
-      },
-      "item3": {
-        "period": "Mai 2022 - Août 2022",
-        "role": "Stagiaire Développeur Full-stack",
-        "company": "Sopra Steria - Aeroline",
-        "location": "Bordeaux, France",
-        "description": "Participation à des tâches de développement en tant que membre d'une équipe de 4 personnes, contribuant à un projet pour un acteur majeur de l'industrie aéronautique. Développement de A à Z d'un nouveau module pour l'application, y compris la conception, le développement, les tests et le déploiement. Expérience sur une codebase très large, dans le respect des bonnes pratiques avec beaucoup de code review."
-      }
-    }
+    "title": "Expériences professionnelles"
   },
   "contact": {
     "title": "Me contacter",
@@ -108,7 +50,6 @@
     "exportPdfJpeg": "Exporter PDF / JPEG",
     "documentLabel": "Vue d'export de Titouan Guedon",
     "role": "Développeur Full-stack",
-    "profileDescription": "Développeur full-stack avec plus de 3 ans d'expérience, formé à l'{university}. Je combine une approche centrée utilisateur avec une forte autonomie technique, de l'architecture à la livraison. Dans mes expériences précédentes, j'ai développé une expertise solide sur des outils et méthodologies modernes, avec une grande attention portée à la qualité du code, la performance et la maintenabilité. Après deux années en Italie, je suis désormais basé en France et à la recherche de nouvelles opportunités pour continuer à progresser en tant que développeur.",
     "contactLinks": "Liens de contact",
     "profile": "Profil",
     "attribution": "Ce PDF a été exporté depuis le site portfolio : {link}",

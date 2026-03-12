@@ -51,40 +51,40 @@
 
       <section class="resume-section">
         <h2>{{ $t('exportView.profile') }}</h2>
-        <i18n-t keypath="exportView.profileDescription" tag="p" class="resume-text">
-          <template #university>
-            <a
-              class="inline-link"
-              href="https://ensc.bordeaux-inp.fr/fr/presentation-de-l-ensc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ $t('profile.universityLabel') }}
-            </a>
-          </template>
-        </i18n-t>
+        <p class="resume-text">
+          {{ exportProfileDescriptionParts.before }}
+          <a
+            class="inline-link"
+            href="https://ensc.bordeaux-inp.fr/fr/presentation-de-l-ensc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ $t('profile.universityLabel') }}
+          </a>
+          {{ exportProfileDescriptionParts.after }}
+        </p>
       </section>
 
       <section class="resume-section">
         <h2>{{ $t('experience.title') }}</h2>
-        <article v-for="item in experienceItems" :key="item" class="experience-item">
+        <article v-for="item in experiences" :key="item.id" class="experience-item">
           <div class="experience-heading">
-            <h3>{{ $t(`${item}.role`) }}</h3>
-            <p class="experience-period">{{ $t(`${item}.period`) }}</p>
+            <h3>{{ item.content[currentLocale].role }}</h3>
+            <p class="experience-period">{{ item.content[currentLocale].period }}</p>
           </div>
-          <p class="experience-company">{{ $t(`${item}.company`) }}</p>
-          <p v-if="te(`${item}.location`)" class="experience-location">{{ $t(`${item}.location`) }}</p>
-          <p class="resume-text">{{ $t(`${item}.description`) }}</p>
+          <p class="experience-company">{{ item.content[currentLocale].company }}</p>
+          <p v-if="item.content[currentLocale].location" class="experience-location">{{ item.content[currentLocale].location }}</p>
+          <p class="resume-text">{{ item.content[currentLocale].description }}</p>
         </article>
       </section>
 
       <section class="resume-section">
         <h2>{{ $t('profile.skillsTitle') }}</h2>
         <div class="skills-grid">
-          <article v-for="category in skillCategories" :key="category.titleKey" class="skill-category">
-            <h3>{{ $t(category.titleKey) }}</h3>
+          <article v-for="category in skills" :key="category.id" class="skill-category">
+            <h3>{{ category.content[currentLocale].title }}</h3>
             <ul>
-              <li v-for="itemKey in category.itemKeys" :key="itemKey">{{ $t(itemKey) }}</li>
+              <li v-for="item in category.content[currentLocale].items" :key="item.text">{{ item.text }}</li>
             </ul>
           </article>
         </div>
@@ -110,60 +110,21 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useExperiencesData } from '../Experience/Experience'
+import { useSkillsData } from '../Skills/Skills'
+import { getProfileContent, splitUniversityPlaceholder } from '../Hero/Profile'
 import profilePhoto from '../../../content/projects/images/bibi.jpeg'
 
 const LANGUAGE_STORAGE_KEY = 'language'
 
-const { locale, t, te } = useI18n()
+const { locale, t } = useI18n()
 const isPrintPreview = ref(false)
+const { experiences } = useExperiencesData()
+const { skills } = useSkillsData()
 
-const experienceItems = [
-  'experience.items.item1',
-  'experience.items.item2',
-  'experience.items.item3'
-]
-
-const skillCategories = [
-  {
-    titleKey: 'profile.skills.development.title',
-    itemKeys: [
-      'profile.skills.development.item1',
-      'profile.skills.development.item2',
-      'profile.skills.development.item3',
-      'profile.skills.development.item4',
-      'profile.skills.development.item5'
-    ]
-  },
-  {
-    titleKey: 'profile.skills.softSkills.title',
-    itemKeys: [
-      'profile.skills.softSkills.item1',
-      'profile.skills.softSkills.item2',
-      'profile.skills.softSkills.item3',
-      'profile.skills.softSkills.item4',
-      'profile.skills.softSkills.item5'
-    ]
-  },
-  {
-    titleKey: 'profile.skills.cognitiveScience.title',
-    itemKeys: [
-      'profile.skills.cognitiveScience.item1',
-      'profile.skills.cognitiveScience.item2',
-      'profile.skills.cognitiveScience.item3',
-      'profile.skills.cognitiveScience.item4',
-      'profile.skills.cognitiveScience.item5'
-    ]
-  },
-  {
-    titleKey: 'profile.skills.languages.title',
-    itemKeys: [
-      'profile.skills.languages.item1',
-      'profile.skills.languages.item2',
-      'profile.skills.languages.item3',
-      'profile.skills.languages.item4'
-    ]
-  }
-]
+const currentLocale = computed<'en' | 'fr'>(() => (locale.value === 'fr' ? 'fr' : 'en'))
+const exportProfileDescription = computed(() => getProfileContent(currentLocale.value).exportDescription)
+const exportProfileDescriptionParts = computed(() => splitUniversityPlaceholder(exportProfileDescription.value))
 
 const languageSwitchLabel = computed(() => (locale.value === 'fr' ? 'EN' : 'FR'))
 const languageSwitchTitle = computed(() => (
