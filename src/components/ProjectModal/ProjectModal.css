@@ -150,6 +150,11 @@
   color: var(--text-light);
 }
 
+.modal-description {
+  white-space: pre-line;
+  word-break: break-word;
+}
+
 .modal-tags {
   margin: 2rem 0;
 }

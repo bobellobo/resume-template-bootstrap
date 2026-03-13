@@ -6,20 +6,22 @@
         "title": "Development related",
         "items": [
           { "text": "Full-stack web development" },
-          { "text": "TypeScript, JavaScript, and modern frameworks" },
-          { "text": "API design and integration" },
-          { "text": "Functional programming" },
-          { "text": "Clean architecture and maintainable code" }
+          { "text": "TypeScript, JavaScript, and modern frameworks (Angular, React, Vue)" },
+          { "text": "API design and integration (Node.js)" },
+          { "text": "Functional  and asynchronous programming (fp-ts, Effect-TS, RxJS)" },
+          { "text": "Clean architecture and maintainable code" },
+          { "text": "Docker and containerization" }
         ]
       },
       "fr": {
         "title": "Développement",
         "items": [
           { "text": "Développement web full-stack" },
-          { "text": "TypeScript, JavaScript et frameworks modernes" },
-          { "text": "Conception et intégration d'API" },
-          { "text": "Programmation fonctionnelle" },
-          { "text": "Architecture propre et code maintenable" }
+          { "text": "TypeScript, JavaScript et frameworks modernes (Angular, React, Vue)" },
+          { "text": "Conception et intégration d'API (Node.js)" },
+          { "text": "Programmation fonctionnelle et asynchrone (fp-ts, Effect-TS, RxJS)" },
+          { "text": "Architecture propre et code maintenable" },
+          { "text": "Docker et containerisation" }
         ]
       }
     }
@@ -95,6 +97,29 @@
           { "text": "Anglais (bilingue professionnel)" },
           { "text": "Italien (bilingue professionnel)" },
           { "text": "Espagnol (intermédiaire)" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "other",
+    "content": {
+      "en": {
+        "title": "Other",
+        "items": [
+          { "text": "Prototyping with Figma" },
+          { "text": "Agile methodologies" },
+          { "text": "Photoshop / Illustrator / Premiere Pro" },
+          { "text": "Scientific protocols and experiment conduction" }
+        ]
+      },
+      "fr": {
+        "title": "Autres",
+        "items": [
+          { "text": "Maquettage et prototypage avec Figma" },
+          { "text": "Méthodologies agiles" },
+          { "text": "Photoshop / Illustrator / Premiere Pro" },
+          { "text": "Protocoles scientifiques et passation d'expériences" }
         ]
       }
     }

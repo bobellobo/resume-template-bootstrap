@@ -3,14 +3,14 @@
     "id": 5,
     "content": {
       "en": {
-        "title": "Portfolio Template Scaffold (WIP)",
-        "description": "I am currently turning this resume website into a reusable starter template so developers (or others) can scaffold their own portfolio quickly. The goal is to provide clean structure, bilingual content support, modular sections, and export capabilities that can be customized with minimal setup. This is currently a work in progress.",
-        "shortDescription": "This resume website is being converted into a reusable portfolio template for scaffolding your own portfolio. Work in progress."
+        "title": "Portfolio Website Template",
+        "description": "Creating a reusable template based on this site to allow anyone to easily generate and host their own portfolio site via Github Pages, with quick and easy customization possibilities. \nThe goal is to provide a clean structure, bilingual content support, easy customization and most importantly the ability to export the content into a CV in PDF format easily. \nBecause most CV generators out there offer poor customization possibilities and are hard to maintain in the long run. By maintaining the content of your own portfolio site you also update your resume at the same time, and you can easily share your portfolio with recruiters and peers.",
+        "shortDescription": "Creating a reusable template based on this site to allow anyone to easily generate and host their own portfolio site via Github Pages, with quick and easy customization possibilities."
       },
       "fr": {
-        "title": "Modèle de portfolio réutilisable (WIP)",
-        "description": "Je transforme ce site de CV en template réutilisable pour permettre aux développeurs de générer rapidement leur propre portfolio. L'objectif est de proposer une structure claire, un support bilingue, des sections modulaires et des capacités d'export facilement personnalisables. Ce projet est actuellement en cours de réalisation.",
-        "shortDescription": "Ce site de CV est en cours de transformation en template réutilisable pour générer son propre portfolio, pour permettre une personnalisation rapide et facile. Projet en cours."
+        "title": "Modèle de site portfolio réutilisable",
+        "description": "Création d'un template réutilisable sur la base de ce site pour permettre à quiconque de générer et héberger son propre site portfolio facilement, avec des possibilités de personnalisation rapide et facile. \nLe but est de fournir une structure propre, un support de contenu bilingue, une personnalisation facile et surtout la capacité d'exporter le contenu en CV au format PDF facilement. \nCe projet part du constat que la plupart des générateurs de CV offrent peu de possibilités de personnalisation (ou bien sont payants) et sont difficiles à maintenir sur le long terme. En maintenant le contenu de votre propre site portfolio, vous mettez également à jour votre CV en même temps, et vous pouvez facilement partager votre CV/portfolio avec des recruteurs.",
+        "shortDescription": "Création d'un template réutilisable sur la base de ce site pour permettre à quiconque de générer et héberger son propre site portfolio facilement, avec des possibilités de personnalisation rapide et facile."
       }
     },
     "image": "images/business-portfolio-icon.avif",
@@ -87,6 +87,63 @@
     },
     "image": "images/cardapp.png",
     "technologies": ["React Native", "Expo", "Firebase", "TypeScript"],
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "content": {
+      "en": {
+        "title": "Autonomous vehicles behaviors experiments",
+        "description": "Implementation and validation of protocols, on simulator and in virtual reality, for the study of the acceptability of autonomous vehicle behaviors in mixed traffic situations. Conducting experiments, analyzing results. As part of the thesis work of Mr. Gabriel Nativel-Fontaine.",
+        "shortDescription": "Implementation of protocols and conducting experiments on the acceptability of autonomous vehicle behaviors in mixed traffic situations. As part of the thesis work of Mr. Gabriel Nativel-Fontaine."
+      },
+      "fr": {
+        "title": "Expériences sur les comportements des véhicules autonomes",
+        "description": "Mise en place et validation de protocoles, sur simulateur et en réalité virtuelle, pour l'étude de l'acceptabilité des comportements des véhicules autonomes en situation de trafic mixte. Conduite d'expériences, analyse des résultats. Dans le cadre des travaux de thèses de M. Gabriel Nativel-Fontaine.",
+        "shortDescription": "Mise en place de protocoles et conduite d'expériences sur l'acceptabilité des comportements des véhicules autonomes en situation de trafic mixte. Dans le cadre des travaux de thèses de M. Gabriel Nativel-Fontaine."
+      }
+  
+    },
+    "image": "images/simu.png",
+    "technologies": ["C#", "Unity", "VR", "Simulation", "Research"],
+    "link": "https://theses.fr/2024BORD0304"
+  }, 
+  {
+    "id": 6,
+    "content": {
+      "en": {
+        "title": "Study of the impact of music on emotions",
+        "description": "Implementation of a protocol for the study of the impact of music on emotions, using the EmotivPRO headset and software. Development of Node-Red flows for data collection and dashboard automation. Conducting experiments, analyzing results.",
+        "shortDescription": "Conduction of experiments based on ECG brainwave analysis to study the impact of music on emotions."
+      },
+      "fr": {
+        "title": "Etude de l'impact de la musique sur les émotions",
+        "description": "Mise en place d'un protocole pour l'étude de l'impact de la musique sur les émotions, utilisant le casque et le logiciel EmotivPRO. Développement d'un dashboard pour la collecte de données et l'automatisation du processus avec Node-Red. Conduite d'expériences, analyse des résultats.",
+        "shortDescription": "Conduite d'expériences basées sur l'analyse des ondes cérébrales ECG pour étudier l'impact de la musique sur les émotions."
+      }
+  
+    },
+    "image": "images/emotiv-pro.jpg",
+    "technologies": ["Node-Red", "ECG brainwave analysis", "Dashboard automation", "EmotivPRO", "Research"],
+    "link": "#"
+  },
+    {
+    "id": 7,
+    "content": {
+      "en": {
+        "title": "Self-hosted media server",
+        "description": "Setting up a self-hosted media server using open-source tools. This project involved configuring the server to manage and stream media content efficiently, ensuring secure access and optimal performance. The media server allows for centralized storage and easy access to media files across multiple devices within the network.",
+        "shortDescription": "Setting up a self-hosted media server using open-source tools for efficient media management and streaming."
+      },
+      "fr": {
+        "title": "Serveur multimédia auto-hébergé",
+        "description": "Mise en place d'un serveur multimédia auto-hébergé utilisant des outils open-source. Ce projet a consisté à configurer le serveur pour gérer et diffuser le contenu multimédia de manière efficace, en garantissant un accès sécurisé et des performances optimales. Le serveur permet un stockage centralisé et un accès facile aux divers fichiers multimédias sur n'importe quel appareil.",
+        "shortDescription": "Mise en place d'un serveur multimédia auto-hébergé utilisant des outils open-source pour la gestion et le partage de médias."
+      }
+  
+    },
+    "image": "images/homelab.jpg",
+    "technologies": ["Docker", "Linux", "Reverse Proxy", "Media Management", "Server Administration"],
     "link": "#"
   }
 ]

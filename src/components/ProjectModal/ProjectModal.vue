@@ -16,7 +16,7 @@
       </div>
       <div class="modal-body">
         <h2>{{ currentProject?.content[currentLocale].title }}</h2>
-        <p>{{ currentProject?.content[currentLocale].description }}</p>
+        <p class="modal-description">{{ currentProject?.content[currentLocale].description }}</p>
         <div class="modal-tags">
           <h4>{{ $t('modal.technologiesUsed') }}</h4>
           <div class="technologies">
