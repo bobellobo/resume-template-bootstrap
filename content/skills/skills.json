@@ -47,7 +47,7 @@
           { "text": "Esprit d'équipe et collaboration" },
           { "text": "Résolution de problèmes" },
           { "text": "Adaptabilité et apprentissage continu" },
-          { "text": "Forte capacité d'autonomie" },
+          { "text": "Bonne capacité de travail en autonomie" },
           { "text": "Plutôt fort au babyfoot", "isJoke": true }
         ]
       }
@@ -71,8 +71,8 @@
         "items": [
           { "text": "Analyse des comportements utilisateurs" },
           { "text": "Principes d'interaction humain-machine" },
-          { "text": "Conception et interprétation d'expériences" },
           { "text": "Conception centrée utilisateur" },
+          { "text": "Conception et interprétation d'expériences" },
           { "text": "Maîtrise des outils de design UX/UI" }
         ]
       }

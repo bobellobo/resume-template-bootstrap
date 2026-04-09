@@ -39,13 +39,14 @@
           </div>
         </div>
         <ul class="resume-links" :aria-label="$t('exportView.contactLinks')">
-          <li><a href="mailto:titouanguedon@proton.me">titouanguedon@proton.me</a></li>
+          <li><a :href="`mailto:${contact.email}`">{{ contact.email }}</a></li>
+          <li><a :href="`tel:${contact.phone}`">{{ contact.phone }}</a></li>
           <li>
-            <a href="https://www.linkedin.com/in/titouan-guedon-150438198/" target="_blank" rel="noopener noreferrer">
+            <a :href="contact.linkedin" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
           </li>
-          <li><a href="https://github.com/bobellobo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a :href="contact.github" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         </ul>
       </header>
 
@@ -81,7 +82,7 @@
       <section class="resume-section">
         <h2>{{ $t('profile.skillsTitle') }}</h2>
         <div class="skills-grid">
-          <article v-for="category in skills" :key="category.id" class="skill-category">
+          <article v-for="category in exportSkills" :key="category.id" class="skill-category">
             <h3>{{ category.content[currentLocale].title }}</h3>
             <ul>
               <li v-for="item in category.content[currentLocale].items" :key="item.text">{{ item.text }}</li>
@@ -112,7 +113,7 @@ import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useExperiencesData } from '../../content/data/experiences'
 import { useSkillsData } from '../../content/data/skills'
-import { getProfileContent, splitUniversityPlaceholder } from '../../content/data/profile'
+import { getProfileContent, getContactInfo, splitUniversityPlaceholder } from '../../content/data/profile'
 import { getSupportedLocale } from '../../content/locale'
 import profilePhoto from '../../../content/projects/images/bibi.jpeg'
 
@@ -122,8 +123,28 @@ const { locale, t } = useI18n()
 const isPrintPreview = ref(false)
 const { experiences } = useExperiencesData()
 const { skills } = useSkillsData()
+const contact = getContactInfo()
 
 const currentLocale = computed(() => getSupportedLocale(locale.value))
+const exportSkills = computed(() => (
+  skills.value
+    .map((category) => ({
+      ...category,
+      content: {
+        en: {
+          ...category.content.en,
+          items: category.content.en.items.filter((item) => !item.isJoke),
+        },
+        fr: {
+          ...category.content.fr,
+          items: category.content.fr.items.filter((item) => !item.isJoke),
+        },
+      },
+    }))
+    .filter((category) => (
+      category.content.en.items.length > 0 || category.content.fr.items.length > 0
+    ))
+))
 const exportProfileDescription = computed(() => getProfileContent(currentLocale.value).exportDescription)
 const exportProfileDescriptionParts = computed(() => splitUniversityPlaceholder(exportProfileDescription.value))
 

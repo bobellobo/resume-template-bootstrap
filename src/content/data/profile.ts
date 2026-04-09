@@ -6,7 +6,15 @@ export interface ProfileTextContent {
   exportDescription: string
 }
 
+export interface ContactInfo {
+  email: string
+  phone: string
+  linkedin: string
+  github: string
+}
+
 interface ProfileData {
+  contact: ContactInfo
   content: {
     en: ProfileTextContent
     fr: ProfileTextContent
@@ -19,6 +27,8 @@ const profileData = rawProfile as ProfileData
 export const getProfileContent = (locale: SupportedLocale): ProfileTextContent => (
   locale === 'fr' ? profileData.content.fr : profileData.content.en
 )
+
+export const getContactInfo = (): ContactInfo => profileData.contact
 
 export const splitUniversityPlaceholder = (text: string) => {
   const tokenIndex = text.indexOf(UNIVERSITY_TOKEN)
