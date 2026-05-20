@@ -7,14 +7,32 @@
         "role": "Full-stack Engineer",
         "company": "STMicroelectronics - System Research & Application",
         "location": "Catania, Italy",
-        "description": "Designed and delivered tools end-to-end, from architecture to deployment, with a great care for clean interfaces and performance. Strong emphasis on functional programming paradigms and development best practices."
+        "sections": [
+          {
+            "title": "API integration tools - Lead Developer",
+            "description": "Agnostic approach for API oriented systems integration and inter-operability. Part of the STM32 Motor Control SDK. \nLed to a patent application."
+          },
+          {
+            "title": "Full stack development",
+            "description": "Design and delivery of end-to-end web applications, from requirement definition to deployment, with a strong focus on clean interfaces and performance. Strong emphasis on functional programming paradigms and development best practices."
+          }
+        ]
       },
       "fr": {
         "period": "Janvier 2024 — Janvier 2026",
         "role": "Développeur Full-stack",
         "company": "STMicroelectronics - System Research & Application",
         "location": "Catane, Italie",
-        "description": "Conception et livraison d'applications web de bout en bout, de la définition du besoin jusqu'au déploiement, avec une grande attention portée à la propreté des interfaces et la performance. Fort accent sur les paradigmes de programmation fonctionnelle et les bonnes pratiques de développement."
+        "sections": [
+          {
+            "title": "Outils d'intégration d'API - Lead Developer",
+            "description": "Approche agnostique pour l'intégration de systèmes orientés API et l'interopérabilité. Partie du SDK STM32 Motor Control. \nA conduit à une demande de brevet."
+          },
+          {
+            "title": "Développement fullstack",
+            "description": "Conception et livraison d'applications web de bout en bout, de la définition du besoin jusqu'au déploiement, avec une grande attention portée à la propreté des interfaces et la performance. Fort accent sur les paradigmes de programmation fonctionnelle et les bonnes pratiques de développement."
+          }
+        ]
       }
     }
   },

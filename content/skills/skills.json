@@ -3,25 +3,23 @@
     "id": "development",
     "content": {
       "en": {
-        "title": "Development related",
+        "title": "Full-stack web development",
         "items": [
-          { "text": "Full-stack web development" },
           { "text": "TypeScript, JavaScript, and modern frameworks (Angular, React, Vue)" },
           { "text": "API design and integration (Node.js)" },
           { "text": "Functional  and asynchronous programming (fp-ts, Effect-TS, RxJS)" },
           { "text": "Clean architecture and maintainable code" },
-          { "text": "Docker and containerization" }
+          { "text": "Experience with Java, C#, Python, Docker" }
         ]
       },
       "fr": {
-        "title": "Développement",
+        "title": "Développement web full-stack",
         "items": [
-          { "text": "Développement web full-stack" },
           { "text": "TypeScript, JavaScript et frameworks modernes (Angular, React, Vue)" },
           { "text": "Conception et intégration d'API (Node.js)" },
           { "text": "Programmation fonctionnelle et asynchrone (fp-ts, Effect-TS, RxJS)" },
           { "text": "Architecture propre et code maintenable" },
-          { "text": "Docker et containerisation" }
+          {  "text": "Expériences avec Java, C#, Python, Docker"}
         ]
       }
     }

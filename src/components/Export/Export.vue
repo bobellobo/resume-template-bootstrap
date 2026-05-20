@@ -73,9 +73,22 @@
             <h3>{{ item.content[currentLocale].role }}</h3>
             <p class="experience-period">{{ item.content[currentLocale].period }}</p>
           </div>
-          <p class="experience-company">{{ item.content[currentLocale].company }}</p>
-          <p v-if="item.content[currentLocale].location" class="experience-location">{{ item.content[currentLocale].location }}</p>
-          <p class="resume-text">{{ item.content[currentLocale].description }}</p>
+          <p class="experience-company">{{ item.content[currentLocale].company }}<span v-if="item.content[currentLocale].location" class="experience-location"> · {{ item.content[currentLocale].location }}</span></p>
+
+          <template v-if="item.content[currentLocale].sections && item.content[currentLocale].sections!.length > 1">
+            <p v-if="item.content[currentLocale].description" class="resume-text">{{ item.content[currentLocale].description }}</p>
+            <div class="experience-sections">
+              <div
+                v-for="(section, index) in item.content[currentLocale].sections"
+                :key="index"
+                class="experience-section"
+              >
+                <h4 class="experience-section-title">{{ section.title }}</h4>
+                <p class="resume-text">{{ section.description }}</p>
+              </div>
+            </div>
+          </template>
+          <p v-else class="resume-text">{{ item.content[currentLocale].description ?? item.content[currentLocale].sections?.[0]?.description }}</p>
         </article>
       </section>
 

@@ -1,12 +1,18 @@
 import { ref } from 'vue'
 import rawExperiences from '@content/experiences/experiences.json'
 
+export interface ExperienceSection {
+  title: string
+  description: string
+}
+
 export interface ExperienceContent {
   period: string
   role: string
   company: string
-  location: string
-  description: string
+  location?: string
+  description?: string
+  sections?: ExperienceSection[]
 }
 
 export interface Experience {

@@ -157,17 +157,36 @@
 }
 
 .experience-company {
-  margin: 0;
+  margin: 0 0 0.2rem;
   color: #0f172a;
   font-size: 0.82rem;
   font-weight: 600;
 }
 
 .experience-location {
-  margin: 0 0 0.2rem;
+  margin: 0;
   color: #475569;
   font-size: 0.78rem;
   font-weight: 500;
+}
+
+.experience-sections {
+  margin-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.experience-section {
+  padding-left: 0.6rem;
+  border-left: 2px solid color-mix(in srgb, #c2410c 30%, transparent);
+}
+
+.experience-section-title {
+  margin: 0 0 0.1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0f172a;
 }
 
 .skills-grid {
@@ -344,21 +363,39 @@
 }
 
 .resume-page.print-preview .experience-location {
-  margin-bottom: 0.14rem;
-  font-size: 0.71rem;
+  font-size: 0.7rem;
+}
+
+.resume-page.print-preview .experience-sections {
+  margin-top: 0.2rem;
+  gap: 0.2rem;
+}
+
+.resume-page.print-preview .experience-section {
+  padding-left: 0.45rem;
+}
+
+.resume-page.print-preview .experience-section-title {
+  font-size: 0.74rem;
 }
 
 .resume-page.print-preview .skills-grid {
-  gap: 0.55rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
 }
 
 .resume-page.print-preview .skill-category {
-  padding: 0.46rem 0.56rem;
+  padding: 0.35rem 0.45rem;
+}
+
+.resume-page.print-preview .skill-category h3 {
+  font-size: 0.76rem;
+  margin-bottom: 0.2rem;
 }
 
 .resume-page.print-preview .skill-category li {
-  font-size: 0.73rem;
-  line-height: 1.26;
+  font-size: 0.67rem;
+  line-height: 1.2;
 }
 
 .resume-page.print-preview .export-attribution {
@@ -473,21 +510,39 @@
   }
 
   .experience-location {
-    margin-bottom: 0.14rem;
-    font-size: 0.71rem;
+    font-size: 0.7rem;
+  }
+
+  .experience-sections {
+    margin-top: 0.2rem;
+    gap: 0.2rem;
+  }
+
+  .experience-section {
+    padding-left: 0.45rem;
+  }
+
+  .experience-section-title {
+    font-size: 0.74rem;
   }
 
   .skills-grid {
-    gap: 0.55rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.4rem;
   }
 
   .skill-category {
-    padding: 0.46rem 0.56rem;
+    padding: 0.35rem 0.45rem;
+  }
+
+  .skill-category h3 {
+    font-size: 0.76rem;
+    margin-bottom: 0.2rem;
   }
 
   .skill-category li {
-    font-size: 0.73rem;
-    line-height: 1.26;
+    font-size: 0.67rem;
+    line-height: 1.2;
   }
 
   .export-attribution {

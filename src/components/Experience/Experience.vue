@@ -14,9 +14,22 @@
           <div class="timeline-card surface-card">
             <p class="timeline-period">{{ item.content[currentLocale].period }}</p>
             <h3 class="timeline-role">{{ item.content[currentLocale].role }}</h3>
-            <p class="timeline-company">{{ item.content[currentLocale].company }}</p>
-            <p v-if="item.content[currentLocale].location" class="timeline-location">{{ item.content[currentLocale].location }}</p>
-            <p class="timeline-description">{{ item.content[currentLocale].description }}</p>
+            <p class="timeline-company">{{ item.content[currentLocale].company }}<span v-if="item.content[currentLocale].location" class="timeline-location"> · {{ item.content[currentLocale].location }}</span></p>
+
+            <template v-if="item.content[currentLocale].sections && item.content[currentLocale].sections!.length > 1">
+              <p v-if="item.content[currentLocale].description" class="timeline-description">{{ item.content[currentLocale].description }}</p>
+              <div class="timeline-sections">
+                <div
+                  v-for="(section, index) in item.content[currentLocale].sections"
+                  :key="index"
+                  class="timeline-section"
+                >
+                  <h4 class="timeline-section-title">{{ section.title }}</h4>
+                  <p class="timeline-description">{{ section.description }}</p>
+                </div>
+              </div>
+            </template>
+            <p v-else class="timeline-description">{{ item.content[currentLocale].description ?? item.content[currentLocale].sections?.[0]?.description }}</p>
           </div>
         </article>
       </div>
