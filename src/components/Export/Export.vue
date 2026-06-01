@@ -23,45 +23,48 @@
       <button type="button" class="toolbar-button" @click="printExport">{{ $t('exportView.exportPdfJpeg') }}</button>
     </div>
 
-    <article class="resume-sheet" :aria-label="$t('exportView.documentLabel')">
+    <article class="resume-sheet" :aria-label="$t('exportView.documentLabel', { name: profileIdentity.fullName })">
       <header class="resume-header">
         <div class="resume-identity">
           <img
             class="resume-photo"
             :src="profilePhoto"
-            :alt="$t('exportView.photoAlt')"
+            :alt="$t('exportView.photoAlt', { name: profileIdentity.fullName })"
             loading="eager"
             decoding="async"
           >
           <div>
-            <h1 class="resume-name">Titouan Guedon</h1>
+            <h1 class="resume-name">{{ profileIdentity.fullName }}</h1>
             <p class="resume-role">{{ $t('exportView.role') }}</p>
           </div>
         </div>
         <ul class="resume-links" :aria-label="$t('exportView.contactLinks')">
-          <li><a :href="`mailto:${contact.email}`">{{ contact.email }}</a></li>
-          <li><a :href="`tel:${contact.phone}`">{{ contact.phone }}</a></li>
-          <li>
-            <a :href="contact.linkedin" target="_blank" rel="noopener noreferrer">
-              LinkedIn
+          <li v-for="link in exportContactLinks" :key="`${link.label}-${link.url}`">
+            <a
+              :href="link.url"
+              :target="isExternalUrl(link.url) ? '_blank' : undefined"
+              :rel="isExternalUrl(link.url) ? 'noopener noreferrer' : undefined"
+            >
+              {{ link.display }}
             </a>
           </li>
-          <li><a :href="contact.github" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         </ul>
       </header>
 
       <section class="resume-section">
         <p class="resume-text">
-          {{ exportProfileDescriptionParts.before }}
-          <a
-            class="inline-link"
-            href="https://ensc.bordeaux-inp.fr/fr/presentation-de-l-ensc"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ $t('profile.universityLabel') }}
-          </a>
-          {{ exportProfileDescriptionParts.after }}
+          <template v-for="(segment, index) in exportProfileDescriptionSegments" :key="`${segment.type}-${index}`">
+            <a
+              v-if="segment.type === 'link'"
+              class="inline-link"
+              :href="segment.url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ segment.label }}
+            </a>
+            <span v-else>{{ segment.value }}</span>
+          </template>
         </p>
       </section>
 
@@ -131,15 +134,15 @@
         </div>
       </section>
 
-      <p class="export-attribution">
+      <p v-if="profileIdentity.portfolioUrl" class="export-attribution">
         <i18n-t keypath="exportView.attribution" tag="span">
           <template #link>
             <a
-              href="https://bobellobo.github.io/resume/"
+              :href="profileIdentity.portfolioUrl"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://bobellobo.github.io/resume/
+              {{ profileIdentity.portfolioUrl }}
             </a>
           </template>
         </i18n-t>
@@ -153,9 +156,14 @@ import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useExperiencesData } from '../../content/data/experiences'
 import { useSkillsData } from '../../content/data/skills'
-import { getProfileContent, getContactInfo, splitUniversityPlaceholder } from '../../content/data/profile'
+import {
+  getProfileContent,
+  getProfileContactLinks,
+  getProfileIdentity,
+  getProfilePhoto,
+  parseRichTextSegments,
+} from '../../content/data/profile'
 import { getSupportedLocale } from '../../content/locale'
-import profilePhoto from '../../../content/projects/images/bibi.jpeg'
 
 const LANGUAGE_STORAGE_KEY = 'language'
 
@@ -163,9 +171,11 @@ const { locale, t } = useI18n()
 const isPrintPreview = ref(false)
 const { experiences } = useExperiencesData()
 const { skills } = useSkillsData()
-const contact = getContactInfo()
+const profileIdentity = getProfileIdentity()
+const profilePhoto = getProfilePhoto()
 
 const currentLocale = computed(() => getSupportedLocale(locale.value))
+const exportContactLinks = computed(() => getProfileContactLinks(currentLocale.value, { exportOnly: true }))
 const exportSkills = computed(() => (
   skills.value
     .map((category) => ({
@@ -186,7 +196,7 @@ const exportSkills = computed(() => (
     ))
 ))
 const exportProfileDescription = computed(() => getProfileContent(currentLocale.value).exportDescription)
-const exportProfileDescriptionParts = computed(() => splitUniversityPlaceholder(exportProfileDescription.value))
+  const exportProfileDescriptionSegments = computed(() => parseRichTextSegments(exportProfileDescription.value))
 
 const languageSwitchLabel = computed(() => (locale.value === 'fr' ? 'EN' : 'FR'))
 const languageSwitchTitle = computed(() => (
@@ -212,6 +222,8 @@ const togglePrintPreview = () => {
 const printExport = () => {
   window.print()
 }
+
+const isExternalUrl = (url: string) => /^https?:\/\//i.test(url)
 </script>
 
 <style scoped src="./Export.css"></style>

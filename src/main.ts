@@ -3,6 +3,7 @@ import { createI18n } from 'vue-i18n'
 import App from './App.vue'
 import enMessages from '@content/i18n/en.json'
 import frMessages from '@content/i18n/fr.json'
+import { getProfileIdentity } from './content/data/profile'
 import './style.css'
 
 const LANGUAGE_STORAGE_KEY = 'language'
@@ -14,6 +15,7 @@ const storedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY)
 const initialLanguage = storedLanguage === 'fr' ? 'fr' : 'en'
 
 document.documentElement.setAttribute('data-theme', initialTheme)
+document.title = `Portfolio - ${getProfileIdentity().fullName}`
 
 const i18n = createI18n({
   legacy: false,

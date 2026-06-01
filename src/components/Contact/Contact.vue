@@ -4,14 +4,15 @@
       <h2 class="section-title">{{ $t('contact.title') }}</h2>
       <p>{{ $t('contact.description') }}</p>
       <div class="contact-links">
-        <a href="https://www.linkedin.com/in/titouan-guedon-150438198/" target="_blank" rel="noreferrer" class="contact-button">
-          {{ $t('footer.links.linkedin') }}
-        </a>
-        <a href="https://github.com/bobellobo" target="_blank" rel="noreferrer" class="contact-button">
-          {{ $t('footer.links.github') }}
-        </a>
-        <a href="mailto:titouanguedon@proton.me" target="_blank" rel="noreferrer" class="contact-button">
-          {{ $t('footer.links.email') }}
+        <a
+          v-for="link in contactLinks"
+          :key="`${link.label}-${link.url}`"
+          :href="link.url"
+          :target="isExternalUrl(link.url) ? '_blank' : undefined"
+          :rel="isExternalUrl(link.url) ? 'noreferrer' : undefined"
+          class="contact-button"
+        >
+          {{ link.label }}
         </a>
       </div>
     </div>
@@ -19,9 +20,17 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { getProfileContactLinks } from '../../content/data/profile'
+import { getSupportedLocale } from '../../content/locale'
 
-useI18n()
+const { locale } = useI18n()
+
+const currentLocale = computed(() => getSupportedLocale(locale.value))
+const contactLinks = computed(() => getProfileContactLinks(currentLocale.value))
+
+const isExternalUrl = (url: string) => /^https?:\/\//i.test(url)
 </script>
 
 <style scoped src="./Contact.css"></style>

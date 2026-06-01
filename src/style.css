@@ -3,53 +3,57 @@
 
 /* ========== CSS Variables ========== */
 :root {
-    --primary-color: #c2410c;
-    --secondary-color: #9a3412;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --bg-light: #f9fafb;
+    --primary-color: #2563ff;
+    --secondary-color: #1d4ed8;
+    --text-dark: #1b2a34;
+    --text-light: #5a6b78;
+    --bg-light: #f3f8fa;
     --bg-white: #ffffff;
-    --surface-page: #f3f4f6;
+    --surface-page: #eef4f7;
     --surface-section: #ffffff;
-    --surface-section-muted: #f9fafb;
-    --surface-header: #eef2f7;
+    --surface-section-muted: #f5f9fc;
+    --surface-header: #e4eff5;
     --surface-navbar: #ffffff;
-    --border-color: #e5e7eb;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --border-color: #d8e3ea;
+    --shadow: 0 6px 14px rgba(18, 44, 61, 0.08);
+    --shadow-lg: 0 16px 36px rgba(18, 44, 61, 0.14);
+    --radius-xs: 0.4rem;
+    --radius-sm: 0.65rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.4rem;
     --text-on-brand: #ffffff;
     --hero-subtext: rgba(255, 255, 255, 0.9);
-    --footer-bg: #1f2937;
+    --footer-bg: #13202b;
     --footer-text: rgba(255, 255, 255, 0.8);
-    --project-placeholder-start: #e5e7eb;
-    --project-placeholder-end: #d1d5db;
-    --overlay-color: rgba(0, 0, 0, 0.5);
-    --focus-ring: rgba(194, 65, 12, 0.32);
+    --project-placeholder-start: #d6e2ea;
+    --project-placeholder-end: #c1d3df;
+    --overlay-color: rgba(11, 25, 35, 0.5);
+    --focus-ring: rgba(37, 99, 255, 0.32);
 }
 
 [data-theme='dark'] {
-    --primary-color: #ea580c;
-    --secondary-color: #c2410c;
+    --primary-color: #60a5fa;
+    --secondary-color: #3b82f6;
     --text-dark: #f5f7fa;
-    --text-light: #a7afba;
-    --bg-light: #1b2028;
-    --bg-white: #232a34;
-    --surface-page: #101318;
-    --surface-section: #171c23;
-    --surface-section-muted: #1e242d;
-    --surface-header: #0d1117;
-    --surface-navbar: #1a2029;
-    --border-color: #313947;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.45);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --text-light: #9fb2c1;
+    --bg-light: #172028;
+    --bg-white: #1f2b34;
+    --surface-page: #0f151b;
+    --surface-section: #141d24;
+    --surface-section-muted: #1a2630;
+    --surface-header: #0d141b;
+    --surface-navbar: #152028;
+    --border-color: #2f404d;
+    --shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 22px 38px rgba(0, 0, 0, 0.52);
     --text-on-brand: #ffffff;
     --hero-subtext: rgba(255, 255, 255, 0.92);
-    --footer-bg: #0f1319;
+    --footer-bg: #0a1016;
     --footer-text: rgba(255, 255, 255, 0.75);
-    --project-placeholder-start: #313947;
-    --project-placeholder-end: #434c5d;
+    --project-placeholder-start: #2b3945;
+    --project-placeholder-end: #384958;
     --overlay-color: rgba(0, 0, 0, 0.65);
-    --focus-ring: rgba(234, 88, 12, 0.38);
+    --focus-ring: rgba(96, 165, 250, 0.34);
 }
 
 /* ========== General Styles ========== */
@@ -66,7 +70,10 @@ html {
 body {
     font-family: 'Geist Mono', monospace;
     color: var(--text-dark);
-    background-color: var(--surface-page);
+    background:
+        radial-gradient(circle at 10% 5%, color-mix(in srgb, var(--primary-color) 10%, transparent) 0%, transparent 42%),
+        radial-gradient(circle at 92% 0%, color-mix(in srgb, var(--secondary-color) 12%, transparent) 0%, transparent 36%),
+        var(--surface-page);
     line-height: 1.6;
     transition: background-color 0.25s ease, color 0.25s ease;
 }

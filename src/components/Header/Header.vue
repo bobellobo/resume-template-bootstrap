@@ -2,7 +2,7 @@
   <header ref="headerRef" class="header">
     <div class="header-shell">
       <nav class="navbar">
-        <a href="#home" class="logo" @click="handleNavLinkClick">Titouan Guedon</a>
+        <a href="#home" class="logo" @click="handleNavLinkClick">{{ profileIdentity.fullName }}</a>
         <ul id="primary-navigation" :class="['nav-links', { open: isMobileMenuOpen }]">
         <li><a href="#home" @click="handleNavLinkClick">{{ $t('nav.home') }}</a></li>
         <li><a href="#skills" @click="handleNavLinkClick">{{ $t('nav.skills') }}</a></li>
@@ -232,8 +232,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useHeaderLogic } from './Header'
-import TemplateNotice from '../TemplateNotice/TemplateNotice.vue'
-import { getTemplateInfo } from '../../content/data/profile'
+import { getProfileIdentity, getTemplateInfo } from '../../content/data/profile'
 
 const { currentLanguage, switchLanguage, currentTheme, toggleTheme } = useHeaderLogic()
 const MOBILE_BREAKPOINT = 900
@@ -245,6 +244,7 @@ const isDesktopLanguageMenuOpen = ref(false)
 const isMobileLanguageMenuOpen = ref(false)
 const isMobileMenuOpen = ref(false)
 const exportLink = '/resume/?view=export'
+const profileIdentity = getProfileIdentity()
 const templateInfo = getTemplateInfo()
 
 const currentLanguageLabel = computed(() => (currentLanguage.value === 'fr' ? 'Français' : 'English'))

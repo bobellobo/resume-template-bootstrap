@@ -23,7 +23,7 @@
 .modal-content {
   position: relative;
   background-color: var(--bg-white);
-  border-radius: 1rem;
+  border-radius: var(--radius-lg);
   width: min(94vw, 980px);
   margin: auto;
   overflow: hidden;
@@ -71,7 +71,7 @@
   height: 100%;
   min-height: 320px;
   overflow: hidden;
-  border-radius: 1rem 0 0 1rem;
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
   background: linear-gradient(
     160deg,
     color-mix(in srgb, var(--bg-light) 82%, transparent),
@@ -89,7 +89,7 @@
   width: 100%;
   height: min(68vh, 460px);
   aspect-ratio: 4 / 3;
-  border-radius: 0.85rem;
+  border-radius: var(--radius-md);
   border: 1px solid color-mix(in srgb, var(--border-color) 72%, transparent);
   background-color: color-mix(in srgb, var(--bg-light) 78%, transparent);
   display: flex;
@@ -176,7 +176,7 @@
   background-color: var(--bg-light);
   color: var(--primary-color);
   padding: 0.4rem 0.8rem;
-  border-radius: 0.3rem;
+  border-radius: var(--radius-xs);
   font-size: 0.85rem;
   font-weight: 600
 }
@@ -208,7 +208,7 @@
 
   .modal-header {
     min-height: 0;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     padding: 0.85rem;
   }
 
@@ -242,7 +242,7 @@
 
   .modal-media-stage {
     height: clamp(180px, 30vh, 240px);
-    border-radius: 0.7rem;
+    border-radius: var(--radius-sm);
   }
 
   .modal-body {

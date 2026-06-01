@@ -1,123 +1,94 @@
 [
-  {
-    "id": "development",
+    {
+    "id": "1",
     "content": {
       "en": {
-        "title": "Full-stack web development",
+        "title": "Category A",
         "items": [
-          { "text": "TypeScript, JavaScript, and modern frameworks (Angular, React, Vue)" },
-          { "text": "API design and integration (Node.js)" },
-          { "text": "Functional  and asynchronous programming (fp-ts, Effect-TS, RxJS)" },
-          { "text": "Clean architecture and maintainable code" },
-          { "text": "Experience with Java, C#, Python, Docker" }
+          { "text": "You can add/remove skills and even sections as you want" },
+          { "text": "Optional crossed-out example (check documentation)", "isJoke": true }
         ]
       },
       "fr": {
-        "title": "Développement web full-stack",
+        "title": "Catégorie A",
         "items": [
-          { "text": "TypeScript, JavaScript et frameworks modernes (Angular, React, Vue)" },
-          { "text": "Conception et intégration d'API (Node.js)" },
-          { "text": "Programmation fonctionnelle et asynchrone (fp-ts, Effect-TS, RxJS)" },
-          { "text": "Architecture propre et code maintenable" },
-          {  "text": "Expériences avec Java, C#, Python, Docker"}
+          { "text": "Vous pouvez ajouter/enlever des compétences et même des sections" },
+          { "text": "Exemple barré optionnel (voir documentation)", "isJoke": true }
         ]
       }
     }
   },
   {
-    "id": "softSkills",
+    "id": "2",
     "content": {
       "en": {
-        "title": "Soft skills",
+        "title": "Category B",
         "items": [
-          { "text": "Clear communication" },
-          { "text": "Collaborative teamwork" },
-          { "text": "Problem solving" },
-          { "text": "Adaptability and continuous learning" },
-          { "text": "Strong ability to work autonomously" },
-          { "text": "Pretty good at foosball", "isJoke": true }
+          { "text": "Time to shine"                      },
+          { "text": "Don't hesitate to exagerate"        },
+          { "text": "#FakeItUntilYouMakeIt"              },
+          { "text": "Open-heart surgery", "isJoke": true },
+          { "text": "(who cares?)"                       }
         ]
       },
       "fr": {
-        "title": "Soft skills",
+        "title": "Catégorie B",
         "items": [
-          { "text": "Communication claire" },
-          { "text": "Esprit d'équipe et collaboration" },
-          { "text": "Résolution de problèmes" },
-          { "text": "Adaptabilité et apprentissage continu" },
-          { "text": "Bonne capacité de travail en autonomie" },
-          { "text": "Plutôt fort au babyfoot", "isJoke": true }
+          { "text": "C'est le moment d'en faire des caisses"   },
+          { "text": "Personne ne vous en voudra"               },
+          { "text": "#FakeItUntilYouMakeIt"                    },
+          { "text": "Chirurgie à cœur ouvert" , "isJoke": true },
+          { "text": "(qui va vérifier?)"                       }
         ]
       }
     }
   },
-  {
-    "id": "cognitiveScience",
+      {
+    "id": "3",
     "content": {
       "en": {
-        "title": "Cognitive science",
+        "title": "Other skills",
         "items": [
-          { "text": "User behavior analysis" },
-          { "text": "Human-computer interaction principles" },
-          { "text": "Experimental design and interpretation" },
-          { "text": "User-centered design" },
-          { "text": "Proficiency with UX/UI design tools" }
-        ]
-      },
-      "fr": {
-        "title": "Sciences cognitives",
-        "items": [
-          { "text": "Analyse des comportements utilisateurs" },
-          { "text": "Principes d'interaction humain-machine" },
-          { "text": "Conception centrée utilisateur" },
-          { "text": "Conception et interprétation d'expériences" },
-          { "text": "Maîtrise des outils de design UX/UI" }
-        ]
-      }
-    }
-  },
-  {
-    "id": "languages",
-    "content": {
-      "en": {
-        "title": "Languages spoken",
-        "items": [
-          { "text": "French (native)" },
-          { "text": "English (fluent)" },
-          { "text": "Italian (fluent)" },
-          { "text": "Spanish (intermediate)" }
-        ]
-      },
-      "fr": {
-        "title": "Langues parlées",
-        "items": [
-          { "text": "Français (langue maternelle)" },
-          { "text": "Anglais (bilingue professionnel)" },
-          { "text": "Italien (bilingue professionnel)" },
-          { "text": "Espagnol (intermédiaire)" }
-        ]
-      }
-    }
-  },
-  {
-    "id": "other",
-    "content": {
-      "en": {
-        "title": "Other",
-        "items": [
-          { "text": "Prototyping with Figma" },
-          { "text": "Agile methodologies" },
-          { "text": "Photoshop / Illustrator / Premiere Pro" },
-          { "text": "Scientific protocols and experiment conduction" }
+          { "text": "Opening 47 tabs and calling it research" },
+          { "text": "Renaming files to final_v2_final_really_final"},
+          { "text": "KPI astrology"},
+          { "text": "Pretending ''low effort'' means 3 working days"},
+          { "text": "Surviving meetings that produce more meetings"}
+          
+
         ]
       },
       "fr": {
         "title": "Autres",
         "items": [
-          { "text": "Maquettage et prototypage avec Figma" },
-          { "text": "Méthodologies agiles" },
-          { "text": "Photoshop / Illustrator / Premiere Pro" },
-          { "text": "Protocoles scientifiques et passation d'expériences" }
+          { "text": "Ouvrir 47 onglets et appeler ça faire des recherches" },
+          { "text": "Renommer des fichiers en final_v2_v3_final_pour_de_vrai" },
+          { "text": "Astrologie des KPI" },
+          { "text": "Transformer les retards en 'arbitrage stratégique'"}
+        ]
+      }
+    }
+  },
+  {
+    "id": "4",
+    "content": {
+      "en": {
+        "title": "Languages",
+        "items": [
+          { "text": "English (fluent)"             },
+          { "text": "Spanish (intermediate)"       },
+          { "text": "Italian (only to order food)" },
+          { "text": "Mandarin (after 3 drinks)"    }
+    
+        ]
+      },
+      "fr": {
+        "title": "Langues",
+        "items": [
+          { "text": "Anglais (vairi goude)"      },
+          { "text": "Espagnol (intermédiaire)"   },
+          { "text": "Italien (que au resto)"     },
+          { "text": "Mandarin (après 3 verres)"  }
         ]
       }
     }

@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 
+const basePath = process.env.VITE_BASE_PATH || '/'
+
 export default defineConfig({
   plugins: [vue()],
   resolve: {
@@ -14,5 +16,5 @@ export default defineConfig({
     port: 5173,
     open: true
   },
-  base: '/resume/',
+  base: basePath,
 })

@@ -1,149 +1,82 @@
 [
   {
-    "id": 5,
-    "content": {
-      "en": {
-        "title": "Portfolio Website Template",
-        "description": "Creating a reusable template based on this site to allow anyone to easily generate and host their own portfolio site via Github Pages, with quick and easy customization possibilities. \nThe goal is to provide a clean structure, bilingual content support, easy customization and most importantly the ability to export the content into a CV in PDF format easily. \nBecause most CV generators out there offer poor customization possibilities and are hard to maintain in the long run. By maintaining the content of your own portfolio site you also update your resume at the same time, and you can easily share your portfolio with recruiters and peers.",
-        "shortDescription": "Creating a reusable template based on this site to allow anyone to easily generate and host their own portfolio site via Github Pages, with quick and easy customization possibilities."
-      },
-      "fr": {
-        "title": "Modèle de site portfolio réutilisable",
-        "description": "Création d'un template réutilisable sur la base de ce site pour permettre à quiconque de générer et héberger son propre site portfolio facilement, avec des possibilités de personnalisation rapide et facile. \nLe but est de fournir une structure propre, un support de contenu bilingue, une personnalisation facile et surtout la capacité d'exporter le contenu en CV au format PDF facilement. \nCe projet part du constat que la plupart des générateurs de CV offrent peu de possibilités de personnalisation (ou bien sont payants) et sont difficiles à maintenir sur le long terme. En maintenant le contenu de votre propre site portfolio, vous mettez également à jour votre CV en même temps, et vous pouvez facilement partager votre CV/portfolio avec des recruteurs.",
-        "shortDescription": "Création d'un template réutilisable sur la base de ce site pour permettre à quiconque de générer et héberger son propre site portfolio facilement, avec des possibilités de personnalisation rapide et facile."
-      }
-    },
-    "image": "images/business-portfolio-icon.avif",
-    "technologies": ["Vue 3", "Vite", "TypeScript", "i18n"],
-    "link": "https://github.com/bobellobo/portfolio-scaffolder"
-  },
-  {
     "id": 1,
     "content": {
       "en": {
-        "title": "WB2MX2",
-        "description": "An agnostic approach for API oriented systems integration. This project focuses on creating a flexible and scalable solution for integrating various APIs in a seamless manner. The main goal is to provide a unified interface for developers to interact with different APIs without worrying about the underlying complexities. In this case study, the solution was implemented as a templating system to integrate various APIs and ensure inter-operability of the STM32 Motor Control Ecosystem. This project led to a patent application.",
-        "shortDescription": "Agnostic approach for API oriented systems integration and inter-operability. Part of the STM32 Motor Control SDK. \nLed to a patent application."
+        "title": "Project 1",
+        "description": "Replace this example with your own project summary. Describe the context, your responsibilities, and the result in one or two concise paragraphs.",
+        "shortDescription": "Short description for project 1.",
+        "technologiesLabel": "Technologies used"
       },
       "fr": {
-        "title": "WB2MX2",
-        "description": "Développement d'une approche agnostique pour l'intégration de systèmes d'API. Création d'une solution flexible et évolutive pour intégrer diverses API de manière transparente. L'objectif principal est de fournir une interface unifiée permettant aux développeurs d'interagir avec différentes API sans se soucier des complexités sous-jacentes. Un dépôt de brevet a été déposé pour le design de ce système de templating.",
-        "shortDescription": "Approche agnostique pour l'intégration de systèmes orientés API via l'implémentation d'un système flexible et évolutif de templating. A conduit à une demande de brevet."
+        "title": "Projet 1",
+        "description": "Remplacez cet exemple par le resume de votre propre projet. Decrivez le contexte, vos responsabilites et le resultat en un ou deux paragraphes.",
+        "shortDescription": "Description du projet 1.",
+        "technologiesLabel": "Technologies utilisées"
       }
     },
-    "image": "images/wb2mx.avif",
-    "technologies": ["EffectTS", "Typescript", "NodeJS", "Functional Programming", "Eta", "Handlebars"],
-    "link": "https://www.st.com/content/st_com/en/ecosystems/stm32-motor-control-ecosystem.html"
+    "image": "images/project-placeholder.svg",
+    "technologies": ["Category A", "Category B", "Category C"],
+    "link": "https://example.com"
   },
   {
     "id": 2,
     "content": {
       "en": {
-        "title": "Estimate (eDesignSuite)",
-        "description": "Estimation tool for circuit design and lifetime estimations. Refactored the frontend, reduced the technical debt over the span of 8 months. Then I created a SVG manager toolchart for circuit design with d3.js.",
-        "shortDescription": "Estimation tool for circuit design and lifetime estimations. Refactored the whole frontend, especially the SVG toolchart."
+        "title": "Project 2",
+        "description": "Use this block as a neutral example. Add your own objective, main actions, and measurable outcomes when your real content is ready.",
+        "shortDescription": "Short description for project 2.",
+        "technologiesLabel": "Skills used"
       },
       "fr": {
-        "title": "Estimate (eDesignSuite)",
-        "description": "Outil d'estimation pour la conception de circuits et les estimations de durée de vie. Tâches de refonte et de réduction de la dette technique du frontend. Création d'un outil de design de circuit firmware avec d3.js et des données SVG.",
-        "shortDescription": "Outil d'estimation pour la conception de circuits et les estimations de durée de vie. Refonte complète du frontend."
+        "title": "Projet 2",
+        "description": "Utilisez ce bloc comme exemple neutre. Ajoutez votre objectif, vos actions principales et vos resultats mesurables quand votre contenu sera pret.",
+        "shortDescription": "Description courte pour le projet 2.",
+        "technologiesLabel": "Compétences utilisées"
       }
     },
-    "image": "images/estimate.png",
-    "technologies": ["Angular", "Redux", "D3.js", "ramda", "RxJS", "TypeScript", "Functional Programming", "Docker", "WSL", "MongoDB"],
-    "link": "https://eds.st.com/eds-console/"
+    "image": "images/project-placeholder.svg",
+    "technologies": ["Skill A", "Skill D", "Skill E"],
+    "link": "https://example.com"
   },
   {
     "id": 3,
     "content": {
       "en": {
-        "title": "AeroWebb - Module GAV",
-        "description": "Developped a whole new module as a part of the AeroWebb suite, made for the management of D type checks in aeronautical maintenance. It provides a comprehensive solution for planning, tracking and managing D checks operations. With this module, users can easily organize tasks, track progress and ensure efficient maintenance of aircrafts.",
-        "shortDescription": "Developped a whole new module as a part of the AeroWebb suite, made for the management of D type checks in aeronautical maintenance."
+        "title": "Project 3",
+        "description": "Another neutral entry. Replace with your own project context, approach, and what changed after delivery.",
+        "shortDescription": "Short description for project 3.",
+        "technologiesLabel": "Items you want to display"
       },
       "fr": {
-        "title": "AeroWebb - Module GAV",
-        "description": "Développement d'un tout nouveau module pour la gestion avancée des grandes visites pour la maintenance aéronautique. Ce module est intégré au coeur de la plateforme AeroWebb, offrant une solution complète pour la planification, le suivi et la gestion des grandes visites. Grâce à ce module, les utilisateurs peuvent facilement organiser les tâches, suivre les progrès et assurer une maintenance efficace des aéronefs. ",
-        "shortDescription": "Développement d'un tout nouveau module pour la gestion avancée des grandes visites pour la maintenance aéronautique. Module intégré au coeur de la plateforme AeroWebb."
+        "title": "Projet 3",
+        "description": "Autre entree neutre. Remplacez par votre contexte projet, votre approche et ce qui a change apres la livraison.",
+        "shortDescription": "Description courte pour le projet 3.",
+        "technologiesLabel": "Éléments à afficher"
       }
     },
-    "image": "images/aero.webp",
-    "technologies": ["Angular", "RxJS", "TypeScript", "Java", "PostgreSQL", "Tomcat", "Hibernate"],
-    "link": "https://2moro.fr/aerowebb"
+    "image": "images/project-placeholder.svg",
+    "technologies": ["Item B", "Item F", "Item G"],
+    "link": "#"
   },
   {
     "id": 4,
     "content": {
       "en": {
-        "title": "Multi-player card game app",
-        "description": "A React Native based application using Firebase for real-time multiplayer card gaming. Designed for playing with friends on the go when you've forgotten to bring a deck. It is structured like live quizz or live game apps like Kahoot with real-time updates, and a simple room ID system. This was a quick side project that I am planning to review soon to improve the codebase and the features.",
-        "shortDescription": "An app dealing with real-time multiplayer card gaming. Designed for playing with friends on the go."
+        "title": "Project 4",
+        "description": "Optional generic slot for any additional work sample. Replace this text entirely with your own project details.",
+        "shortDescription": "Short description for project 4.",
+        "technologiesLabel": "Technologies used"
       },
       "fr": {
-        "title": "Application mobile pour jeu de cartes multijoueur",
-        "description": "Application basée sur React Native + Firebase pour jouer aux cartes en multijoueur et en temps réel. Conçue pour jouer à des jeux simples entre amis lorsque tout le monde a oublié d'apporter un jeu de cartes. Elle est structurée comme des applications de quiz en direct comme Kahoot ou de jeux en direct avec des mises à jour en temps réel et un système simple d'identifiant de session. Il s'agit d'un projet annexe sur lequel j'ai prévu de refaire une passe pour ajouter des features et améliorer le code.",
-        "shortDescription": "Application mobile pour jeu de cartes en multijoueur. Conçue pour jouer avec des amis en déplacement."
+        "title": "Projet 4",
+        "description": "Emplacement generique optionnel pour un travail supplementaire. Remplacez integralement ce texte par les details de votre propre projet.",
+        "shortDescription": "Description courte pour le projet 4.",
+        "technologiesLabel": "Technologies utilisées"
       }
     },
-    "image": "images/cardapp.png",
-    "technologies": ["React Native", "Expo", "Firebase", "TypeScript"],
-    "link": "#"
-  },
-  {
-    "id": 5,
-    "content": {
-      "en": {
-        "title": "Autonomous vehicles behaviors experiments",
-        "description": "Implementation and validation of protocols, on simulator and in virtual reality, for the study of the acceptability of autonomous vehicle behaviors in mixed traffic situations. Conducting experiments, analyzing results. As part of the thesis work of Mr. Gabriel Nativel-Fontaine.",
-        "shortDescription": "Implementation of protocols and conducting experiments on the acceptability of autonomous vehicle behaviors in mixed traffic situations. As part of the thesis work of Mr. Gabriel Nativel-Fontaine."
-      },
-      "fr": {
-        "title": "Expériences sur les comportements des véhicules autonomes",
-        "description": "Mise en place et validation de protocoles, sur simulateur et en réalité virtuelle, pour l'étude de l'acceptabilité des comportements des véhicules autonomes en situation de trafic mixte. Conduite d'expériences, analyse des résultats. Dans le cadre des travaux de thèses de M. Gabriel Nativel-Fontaine.",
-        "shortDescription": "Mise en place de protocoles et conduite d'expériences sur l'acceptabilité des comportements des véhicules autonomes en situation de trafic mixte. Dans le cadre des travaux de thèses de M. Gabriel Nativel-Fontaine."
-      }
-  
-    },
-    "image": "images/simu.png",
-    "technologies": ["C#", "Unity", "VR", "Simulation", "Research"],
-    "link": "https://theses.fr/2024BORD0304"
-  }, 
-  {
-    "id": 6,
-    "content": {
-      "en": {
-        "title": "Study of the impact of music on emotions",
-        "description": "Implementation of a protocol for the study of the impact of music on emotions, using the EmotivPRO headset and software. Development of Node-Red flows for data collection and dashboard automation. Conducting experiments, analyzing results.",
-        "shortDescription": "Conduction of experiments based on ECG brainwave analysis to study the impact of music on emotions."
-      },
-      "fr": {
-        "title": "Etude de l'impact de la musique sur les émotions",
-        "description": "Mise en place d'un protocole pour l'étude de l'impact de la musique sur les émotions, utilisant le casque et le logiciel EmotivPRO. Développement d'un dashboard pour la collecte de données et l'automatisation du processus avec Node-Red. Conduite d'expériences, analyse des résultats.",
-        "shortDescription": "Conduite d'expériences basées sur l'analyse des ondes cérébrales ECG pour étudier l'impact de la musique sur les émotions."
-      }
-  
-    },
-    "image": "images/emotiv-pro.jpg",
-    "technologies": ["Node-Red", "ECG brainwave analysis", "Dashboard automation", "EmotivPRO", "Research"],
-    "link": "#"
-  },
-    {
-    "id": 7,
-    "content": {
-      "en": {
-        "title": "Self-hosted media server",
-        "description": "Setting up a self-hosted media server using open-source tools. This project involved configuring the server to manage and stream media content efficiently, ensuring secure access and optimal performance. The media server allows for centralized storage and easy access to media files across multiple devices within the network.",
-        "shortDescription": "Setting up a self-hosted media server using open-source tools for efficient media management and streaming."
-      },
-      "fr": {
-        "title": "Serveur multimédia auto-hébergé",
-        "description": "Mise en place d'un serveur multimédia auto-hébergé utilisant des outils open-source. Ce projet a consisté à configurer le serveur pour gérer et diffuser le contenu multimédia de manière efficace, en garantissant un accès sécurisé et des performances optimales. Le serveur permet un stockage centralisé et un accès facile aux divers fichiers multimédias sur n'importe quel appareil.",
-        "shortDescription": "Mise en place d'un serveur multimédia auto-hébergé utilisant des outils open-source pour la gestion et le partage de médias."
-      }
-  
-    },
-    "image": "images/homelab.jpg",
-    "technologies": ["Docker", "Linux", "Reverse Proxy", "Media Management", "Server Administration"],
+    "image": "images/project-placeholder.svg",
+    "technologies": ["Technology C", "Technology H", "Technology I"],
     "link": "#"
   }
 ]

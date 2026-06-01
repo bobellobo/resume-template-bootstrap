@@ -18,7 +18,7 @@
 .surface-card {
   background-color: var(--bg-white);
   border: 1px solid var(--border-color);
-  border-radius: 0.75rem;
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow);
 }
 
@@ -27,7 +27,7 @@
 }
 
 .hover-lift:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -39,7 +39,7 @@
   font-size: 1rem;
   font-weight: 600;
   font-family: 'Geist Mono', monospace;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   min-height: 2.75rem;
   transition: all 0.3s ease;
@@ -60,7 +60,7 @@
   font-size: 1rem;
   font-weight: 600;
   font-family: 'Geist Mono', monospace;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   min-height: 2.75rem;
   transition: all 0.3s ease;
