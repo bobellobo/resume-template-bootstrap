@@ -10,11 +10,13 @@
         "sections": [
           {
             "title": "API integration tools - Lead Developer",
-            "description": "Agnostic approach for API oriented systems integration and inter-operability. Part of the STM32 Motor Control SDK. \nLed to a patent application."
+            "description": "Agnostic approach for API oriented systems integration and inter-operability. Part of the STM32 Motor Control SDK. \nLed to a patent application.",
+            "technologies": ["TypeScript", "Node.js", "REST APIs", "STM32 SDK"]
           },
           {
             "title": "Full stack development",
-            "description": "Design and delivery of end-to-end web applications, from requirement definition to deployment, with a strong focus on clean interfaces and performance. Strong emphasis on functional programming paradigms and development best practices."
+            "description": "Design and delivery of end-to-end web applications, from requirement definition to deployment, with a strong focus on clean interfaces and performance. Strong emphasis on functional programming paradigms and development best practices.",
+            "technologies": ["Vue.js", "TypeScript", "Functional Programming", "CI/CD"]
           }
         ]
       },
@@ -26,11 +28,13 @@
         "sections": [
           {
             "title": "Outils d'intégration d'API - Lead Developer",
-            "description": "Approche agnostique pour l'intégration de systèmes orientés API et l'interopérabilité. Partie du SDK STM32 Motor Control. \nA conduit à une demande de brevet."
+            "description": "Approche agnostique pour l'intégration de systèmes orientés API et l'interopérabilité. Partie du SDK STM32 Motor Control. \nA conduit à une demande de brevet.",
+            "technologies": ["TypeScript", "Node.js", "SDK STM32", "Effect-TS"]
           },
           {
             "title": "Développement fullstack",
-            "description": "Conception et livraison d'applications web de bout en bout, de la définition du besoin jusqu'au déploiement, avec une grande attention portée à la propreté des interfaces et la performance. Fort accent sur les paradigmes de programmation fonctionnelle et les bonnes pratiques de développement."
+            "description": "Conception et livraison d'applications web de bout en bout, de la définition du besoin jusqu'au déploiement, avec une grande attention portée à la propreté des interfaces et la performance. Fort accent sur les paradigmes de programmation fonctionnelle et les bonnes pratiques de développement.",
+            "technologies": ["Angular", "React", "Docker", "D3.js", "AWS", "fp-ts"]
           }
         ]
       }
@@ -44,14 +48,16 @@
         "role": "Full-stack Engineer",
         "company": "Sopra Steria - Aeroline",
         "location": "Bordeaux, France",
-        "description": "Development tasks in a challenging and large, international context. Part of a team of 3 developers and one product owner. Agile environment with a lot of ownership and responsibilities given to the developers."
+        "description": "Development tasks in a challenging and large, international context. Part of a team of 3 developers and one product owner. Agile environment with a lot of ownership and responsibilities given to the developers.",
+        "technologies": ["Angular", "Java", "Spring", "Agile Scrum"]
       },
       "fr": {
         "period": "Septembre 2022 — Août 2023",
         "role": "Développeur Full-stack",
         "company": "Sopra Steria - Aeroline",
         "location": "Bordeaux, France",
-        "description": "Tâches de développement dans un projet d'envergure du secteur de l'aéronautique en contexte agile. Dans la continuité du travail déjà fourni avec toujours un ownership important et des responsabilités accrues."
+        "description": "Tâches de développement dans un projet d'envergure du secteur de l'aéronautique en contexte agile. Dans la continuité du travail déjà fourni avec toujours un ownership important et des responsabilités accrues.",
+        "technologies": ["Angular", "Java", "Spring", "Agile Scrum"]
       }
     }
   },
@@ -63,14 +69,16 @@
         "role": "Full-stack Developer Intern",
         "company": "Sopra Steria - Aeroline",
         "location": "Bordeaux, France",
-        "description": "Took part in development tasks as a member of a team of 4, contributing to a project for a major actor in the aeronautical industry. Developed a new module for the core application from start to finish, including design, development, testing and deployment. Gained experience in working in a large codebase and following best practices for maintainable code."
+        "description": "Took part in development tasks as a member of a team of 4, contributing to a project for a major actor in the aeronautical industry. Developed a new module for the core application from start to finish, including design, development, testing and deployment. Gained experience in working in a large codebase and following best practices for maintainable code.",
+        "technologies": ["Angular", "Java", "SQL", "JUnit"]
       },
       "fr": {
         "period": "Mai 2022 - Août 2022",
         "role": "Stagiaire Développeur Full-stack",
         "company": "Sopra Steria - Aeroline",
         "location": "Bordeaux, France",
-        "description": "Développement fullstack en tant que membre d'une équipe de 4 personnes, contribuant à un projet pour un acteur majeur de l'industrie aéronautique. Développement de A à Z d'un nouveau module pour l'application, y compris la conception, les tests et le déploiement. Codebase très large, respect des bonnes pratiques et revues de code."
+        "description": "Développement fullstack en tant que membre d'une équipe de 4 personnes, contribuant à un projet pour un acteur majeur de l'industrie aéronautique. Développement de A à Z d'un nouveau module pour l'application, y compris la conception, les tests et le déploiement. Codebase très large, respect des bonnes pratiques et revues de code.",
+        "technologies": ["Angular", "Java", "SQL", "JUnit"]
       }
     }
   }

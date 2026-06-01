@@ -4,6 +4,7 @@ import rawExperiences from '@content/experiences/experiences.json'
 export interface ExperienceSection {
   title: string
   description: string
+  technologies?: string[]
 }
 
 export interface ExperienceContent {
@@ -12,6 +13,7 @@ export interface ExperienceContent {
   company: string
   location?: string
   description?: string
+  technologies?: string[]
   sections?: ExperienceSection[]
 }
 

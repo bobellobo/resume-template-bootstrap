@@ -13,8 +13,25 @@
           <span class="timeline-dot" aria-hidden="true"></span>
           <div class="timeline-card surface-card">
             <p class="timeline-period">{{ item.content[currentLocale].period }}</p>
-            <h3 class="timeline-role">{{ item.content[currentLocale].role }}</h3>
+
             <p class="timeline-company">{{ item.content[currentLocale].company }}<span v-if="item.content[currentLocale].location" class="timeline-location"> · {{ item.content[currentLocale].location }}</span></p>
+
+            <div class="timeline-role-row">
+              <h3 class="timeline-role">{{ item.content[currentLocale].role }}</h3>
+              <ul
+                v-if="item.content[currentLocale].technologies?.length"
+                class="experience-tags"
+                :aria-label="$t('experience.technologiesLabel')"
+              >
+                <li
+                  v-for="technology in item.content[currentLocale].technologies"
+                  :key="`${item.id}-${technology}`"
+                  class="experience-tag"
+                >
+                  {{ technology }}
+                </li>
+              </ul>
+            </div>
 
             <template v-if="item.content[currentLocale].sections && item.content[currentLocale].sections!.length > 1">
               <p v-if="item.content[currentLocale].description" class="timeline-description">{{ item.content[currentLocale].description }}</p>
@@ -24,7 +41,22 @@
                   :key="index"
                   class="timeline-section"
                 >
-                  <h4 class="timeline-section-title">{{ section.title }}</h4>
+                  <div class="timeline-section-head">
+                    <h4 class="timeline-section-title">{{ section.title }}</h4>
+                    <ul
+                      v-if="section.technologies?.length"
+                      class="experience-tags experience-tags-inline"
+                      :aria-label="$t('experience.technologiesLabel')"
+                    >
+                      <li
+                        v-for="technology in section.technologies"
+                        :key="`${item.id}-${index}-${technology}`"
+                        class="experience-tag"
+                      >
+                        {{ technology }}
+                      </li>
+                    </ul>
+                  </div>
                   <p class="timeline-description">{{ section.description }}</p>
                 </div>
               </div>

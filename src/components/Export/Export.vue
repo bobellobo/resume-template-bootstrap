@@ -51,7 +51,6 @@
       </header>
 
       <section class="resume-section">
-        <h2>{{ $t('exportView.profile') }}</h2>
         <p class="resume-text">
           {{ exportProfileDescriptionParts.before }}
           <a
@@ -73,6 +72,19 @@
             <h3>{{ item.content[currentLocale].role }}</h3>
             <p class="experience-period">{{ item.content[currentLocale].period }}</p>
           </div>
+          <ul
+            v-if="item.content[currentLocale].technologies?.length"
+            class="experience-tags"
+            :aria-label="$t('experience.technologiesLabel')"
+          >
+            <li
+              v-for="technology in item.content[currentLocale].technologies"
+              :key="`${item.id}-${technology}`"
+              class="experience-tag"
+            >
+              {{ technology }}
+            </li>
+          </ul>
           <p class="experience-company">{{ item.content[currentLocale].company }}<span v-if="item.content[currentLocale].location" class="experience-location"> · {{ item.content[currentLocale].location }}</span></p>
 
           <template v-if="item.content[currentLocale].sections && item.content[currentLocale].sections!.length > 1">
@@ -83,7 +95,22 @@
                 :key="index"
                 class="experience-section"
               >
-                <h4 class="experience-section-title">{{ section.title }}</h4>
+                <div class="experience-section-head">
+                  <h4 class="experience-section-title">{{ section.title }}</h4>
+                  <ul
+                    v-if="section.technologies?.length"
+                    class="experience-tags experience-tags-inline"
+                    :aria-label="$t('experience.technologiesLabel')"
+                  >
+                    <li
+                      v-for="technology in section.technologies"
+                      :key="`${item.id}-${index}-${technology}`"
+                      class="experience-tag"
+                    >
+                      {{ technology }}
+                    </li>
+                  </ul>
+                </div>
                 <p class="resume-text">{{ section.description }}</p>
               </div>
             </div>

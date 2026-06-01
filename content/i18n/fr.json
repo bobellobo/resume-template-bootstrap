@@ -22,7 +22,8 @@
     "swipeHint": "Glisser pour naviguer"
   },
   "experience": {
-    "title": "Expériences professionnelles"
+    "title": "Expériences professionnelles",
+    "technologiesLabel": "Technologies principales"
   },
   "contact": {
     "title": "Me contacter",
@@ -51,7 +52,6 @@
     "documentLabel": "Vue d'export de Titouan Guedon",
     "role": "Développeur Full-stack - Ingénieur cogniticien",
     "contactLinks": "Liens de contact",
-    "profile": "Profil",
     "attribution": "Ce CV a été exporté depuis mon site portfolio : {link}",
     "previewOn": "Apercu Impression",
     "previewOff": "Quitter Apercu",

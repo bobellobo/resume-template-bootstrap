@@ -163,6 +163,29 @@
   font-weight: 600;
 }
 
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin: 0 0 0.14rem;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 0.03rem 0.34rem;
+  color: #475569;
+  background: #f8fafc;
+  font-size: 0.64rem;
+  font-family: 'Geist Mono', monospace;
+  line-height: 1.28;
+  white-space: nowrap;
+}
+
 .experience-location {
   margin: 0;
   color: #475569;
@@ -187,6 +210,23 @@
   font-size: 0.82rem;
   font-weight: 700;
   color: #0f172a;
+}
+
+.experience-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.45rem;
+  margin-bottom: 0.08rem;
+}
+
+.experience-tags-inline {
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.experience-section-head .experience-section-title {
+  margin-bottom: 0;
 }
 
 .skills-grid {
@@ -283,6 +323,12 @@
     align-items: flex-start;
     gap: 0.1rem;
   }
+
+  .experience-section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.12rem;
+  }
 }
 
 @page {
@@ -354,6 +400,17 @@
   margin-bottom: 0.42rem;
 }
 
+.resume-page.print-preview .experience-tags {
+  gap: 0.14rem;
+  margin-bottom: 0.1rem;
+}
+
+.resume-page.print-preview .experience-tag {
+  font-size: 0.57rem;
+  padding: 0.01rem 0.23rem;
+  line-height: 1.18;
+}
+
 .resume-page.print-preview .experience-period {
   font-size: 0.72rem;
 }
@@ -377,6 +434,11 @@
 
 .resume-page.print-preview .experience-section-title {
   font-size: 0.74rem;
+}
+
+.resume-page.print-preview .experience-section-head {
+  gap: 0.3rem;
+  margin-bottom: 0.02rem;
 }
 
 .resume-page.print-preview .skills-grid {
@@ -501,6 +563,17 @@
     margin-bottom: 0.42rem;
   }
 
+  .experience-tags {
+    gap: 0.14rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .experience-tag {
+    font-size: 0.57rem;
+    padding: 0.01rem 0.23rem;
+    line-height: 1.18;
+  }
+
   .experience-period {
     font-size: 0.72rem;
   }
@@ -524,6 +597,11 @@
 
   .experience-section-title {
     font-size: 0.74rem;
+  }
+
+  .experience-section-head {
+    gap: 0.3rem;
+    margin-bottom: 0.02rem;
   }
 
   .skills-grid {
