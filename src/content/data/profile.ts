@@ -13,8 +13,14 @@ export interface ContactInfo {
   github: string
 }
 
+export interface TemplateInfo {
+  showNotice: boolean
+  repoUrl: string
+}
+
 interface ProfileData {
   contact: ContactInfo
+  template?: TemplateInfo
   content: {
     en: ProfileTextContent
     fr: ProfileTextContent
@@ -29,6 +35,11 @@ export const getProfileContent = (locale: SupportedLocale): ProfileTextContent =
 )
 
 export const getContactInfo = (): ContactInfo => profileData.contact
+
+export const getTemplateInfo = (): TemplateInfo => ({
+  showNotice: profileData.template?.showNotice ?? false,
+  repoUrl: profileData.template?.repoUrl ?? ''
+})
 
 export const splitUniversityPlaceholder = (text: string) => {
   const tokenIndex = text.indexOf(UNIVERSITY_TOKEN)

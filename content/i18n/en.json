@@ -45,6 +45,15 @@
   "projectCard": {
     "viewProject": "See more"
   },
+  "templateNotice": {
+    "iconAriaLabel": "Open template details",
+    "iconTooltip": "This site is available as a template",
+    "dismiss": "Don't show again",
+    "closeDialog": "Close template details dialog",
+    "dialogTitle": "This portfolio site is available as a template",
+    "dialogDescription": "You can find the repository designed to be easily duplicated and customized to create your own portfolio. You can modify the content files to adapt the texts, projects, skills and experiences. By keeping your portfolio up to date, you can easily maintain and export your resume for recruiters. A guide is included in the repository to facilitate deploying the site via GitHub Pages.",
+    "openRepository": "View the template on GitHub"
+  },
   "exportView": {
     "actionsLabel": "Export actions",
     "backToPortfolio": "Back to portfolio",

@@ -45,6 +45,15 @@
   "projectCard": {
     "viewProject": "Voir plus"
   },
+  "templateNotice": {
+    "iconAriaLabel": "Ouvrir les details du template",
+    "iconTooltip": "Ce site est disponible comme template",
+    "dismiss": "Ne plus afficher",
+    "closeDialog": "Fermer la fenetre des details du template",
+    "dialogTitle": "Ce site portfolio est disponible comme template",
+    "dialogDescription": "Le dépôt est conçu pour permettre de dupliquer le template et de créer et personnaliser rapidement son portfolio. Vous pouvez y modifier les fichiers de contenu pour adapter les textes, projets, compétences et expèriences. Ainsi, en tenant à jour le portfolio vous pouvez facilement maintenir et exporter votre CV pour les recruteurs. Un guide est présent dans le dépôt pour faciliter la mise en ligne du site via GitHub Pages.",
+    "openRepository": "Voir le template sur GitHub"
+  },
   "exportView": {
     "actionsLabel": "Actions d'export",
     "backToPortfolio": "Retour au portfolio",

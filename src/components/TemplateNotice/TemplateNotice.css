@@ -1,0 +1,152 @@
+.template-notice-icon {
+  position: relative;
+  width: 2.35rem;
+  height: 2.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--bg-white);
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.template-notice-icon:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.template-notice-bell {
+  width: 1.08rem;
+  height: 1.08rem;
+}
+
+.template-notice-icon::after {
+  content: '';
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  width: 0.46rem;
+  height: 0.46rem;
+  border-radius: 999px;
+  background: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--bg-white);
+}
+
+.template-notice-icon-opened::after {
+  content: none;
+}
+
+.template-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.template-dialog-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-color);
+}
+
+.template-dialog-content {
+  position: relative;
+  width: min(100%, 32rem);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-white);
+  box-shadow: var(--shadow-lg);
+}
+
+.template-dialog-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-dark);
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.template-dialog-close:hover {
+  background: var(--surface-section-muted);
+}
+
+.template-dialog-content h2 {
+  margin: 0 2rem 0.5rem 0;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+}
+
+.template-dialog-content p {
+  margin: 0 0 0.9rem;
+  color: var(--text-light);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.template-dialog-link {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.78rem;
+  padding: 0.4rem 0.65rem;
+}
+
+.template-dialog-link:hover {
+  background: color-mix(in srgb, var(--primary-color) 10%, transparent);
+}
+
+.template-dialog-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.template-dialog-pop-enter-active,
+.template-dialog-pop-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.template-dialog-pop-enter-from,
+.template-dialog-pop-leave-to {
+  opacity: 0;
+}
+
+.template-dialog-pop-enter-active .template-dialog-overlay,
+.template-dialog-pop-leave-active .template-dialog-overlay {
+  transition: opacity 0.2s ease;
+}
+
+.template-dialog-pop-enter-from .template-dialog-overlay,
+.template-dialog-pop-leave-to .template-dialog-overlay {
+  opacity: 0;
+}
+
+.template-dialog-pop-enter-active .template-dialog-content,
+.template-dialog-pop-leave-active .template-dialog-content {
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.template-dialog-pop-enter-from .template-dialog-content,
+.template-dialog-pop-leave-to .template-dialog-content {
+  opacity: 0;
+  transform: translateY(8px) scale(0.985);
+}

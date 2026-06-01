@@ -1,8 +1,9 @@
 <template>
   <header ref="headerRef" class="header">
-    <nav class="navbar">
-      <a href="#home" class="logo" @click="handleNavLinkClick">Titouan Guedon</a>
-      <ul id="primary-navigation" :class="['nav-links', { open: isMobileMenuOpen }]">
+    <div class="header-shell">
+      <nav class="navbar">
+        <a href="#home" class="logo" @click="handleNavLinkClick">Titouan Guedon</a>
+        <ul id="primary-navigation" :class="['nav-links', { open: isMobileMenuOpen }]">
         <li><a href="#home" @click="handleNavLinkClick">{{ $t('nav.home') }}</a></li>
         <li><a href="#skills" @click="handleNavLinkClick">{{ $t('nav.skills') }}</a></li>
         <li><a href="#experience" @click="handleNavLinkClick">{{ $t('nav.experience') }}</a></li>
@@ -108,8 +109,8 @@
           </div>
         </li>
       </ul>
-      <div class="header-controls">
-        <div class="desktop-controls">
+        <div class="header-controls">
+          <div class="desktop-controls">
           <a
             class="export-link has-tooltip"
             :href="exportLink"
@@ -217,14 +218,22 @@
           <span class="menu-toggle-line"></span>
           <span class="menu-toggle-line"></span>
         </button>
+        </div>
+      </nav>
+      <TemplateNotice
+        v-if="templateInfo.showNotice"
+        class="header-template-notice"
+        :repo-url="templateInfo.repoUrl"
+      />
       </div>
-    </nav>
   </header>
 </template>
 
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useHeaderLogic } from './Header'
+import TemplateNotice from '../TemplateNotice/TemplateNotice.vue'
+import { getTemplateInfo } from '../../content/data/profile'
 
 const { currentLanguage, switchLanguage, currentTheme, toggleTheme } = useHeaderLogic()
 const MOBILE_BREAKPOINT = 900
@@ -236,6 +245,7 @@ const isDesktopLanguageMenuOpen = ref(false)
 const isMobileLanguageMenuOpen = ref(false)
 const isMobileMenuOpen = ref(false)
 const exportLink = '/resume/?view=export'
+const templateInfo = getTemplateInfo()
 
 const currentLanguageLabel = computed(() => (currentLanguage.value === 'fr' ? 'Français' : 'English'))
 
