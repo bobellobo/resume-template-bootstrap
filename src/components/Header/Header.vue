@@ -243,7 +243,7 @@ const mobileLanguageSwitcherRef = ref<HTMLElement | null>(null)
 const isDesktopLanguageMenuOpen = ref(false)
 const isMobileLanguageMenuOpen = ref(false)
 const isMobileMenuOpen = ref(false)
-const exportLink = '/resume/?view=export'
+const exportLink = '/resume-template-bootstrap/?view=export'
 const profileIdentity = getProfileIdentity()
 const templateInfo = getTemplateInfo()
 
